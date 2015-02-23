@@ -3,7 +3,6 @@
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
   "AppIdentifier": "com.telerik.samplefileopenpdf",
   "ProjectName": "sample-file-open-pdf",
-  "IsRunnable": "true",
   "AndroidPermissions": [
     "android.permission.ACCESS_COARSE_LOCATION",
     "android.permission.ACCESS_FINE_LOCATION",
@@ -37,7 +36,6 @@
     "1",
     "2"
   ],
-  "iOSBackgroundMode": [],
   "FrameworkVersion": "3.5.0",
   "CorePlugins": [
     "org.apache.cordova.device",
@@ -59,8 +57,6 @@
   "WP8ProductID": "{a06f7aa3-579d-4807-81a7-12620146b061}",
   "WP8PublisherID": "{9ba50924-6f82-4b98-913a-bb80c15cd41e}",
   "WP8Publisher": "",
-  "WP8Capabilities": [],
-  "WP8Requirements": [],
   "CordovaPluginVariables": {
     "com.telerik.mobiletesting": {
       "IOS_APP_URL": ""
