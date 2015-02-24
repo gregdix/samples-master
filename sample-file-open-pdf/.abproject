@@ -53,8 +53,6 @@
 	"Description": "sample-file-open-pdf",
 	"Framework": "Cordova",
 	"WP8TileTitle": "",
-	"WP8ProductID": "{a06f7aa3-579d-4807-81a7-12620146b061}",
-	"WP8PublisherID": "{9ba50924-6f82-4b98-913a-bb80c15cd41e}",
 	"WP8Publisher": "",
 	"CordovaPluginVariables": {
 		"com.telerik.mobiletesting": {
