@@ -43,13 +43,18 @@
 		"org.apache.cordova.inappbrowser",
 		"org.apache.cordova.splashscreen"
 	],
-	"DisplayName": "sample-file-open-pdf",
+	"DisplayName": "File-open-pdf",
 	"WP8SupportedResolutions": [
 		"ID_RESOLUTION_WVGA",
 		"ID_RESOLUTION_WXGA",
 		"ID_RESOLUTION_HD720P"
 	],
 	"Author": "",
+	"WP8Publisher": "",
+	"WP8TileTitle": "",
+	"WP8Capabilities": [],
+	"iOSBackgroundMode": [],
+	"WP8Requirements": [],
 	"Description": "sample-file-open-pdf",
 	"Framework": "Cordova",
 	"WP8TileTitle": "",
