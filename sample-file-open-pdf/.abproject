@@ -45,9 +45,9 @@
 	],
 	"DisplayName": "File-open-pdf",
 	"WP8SupportedResolutions": [
+		"ID_RESOLUTION_HD720P",
 		"ID_RESOLUTION_WVGA",
-		"ID_RESOLUTION_WXGA",
-		"ID_RESOLUTION_HD720P"
+		"ID_RESOLUTION_WXGA"
 	],
 	"Author": "",
 	"WP8Publisher": "",
@@ -57,12 +57,14 @@
 	"WP8Requirements": [],
 	"Description": "sample-file-open-pdf",
 	"Framework": "Cordova",
-	"WP8TileTitle": "",
-	"WP8Publisher": "",
 	"CordovaPluginVariables": {
 		"com.telerik.mobiletesting": {
 			"IOS_APP_URL": ""
 		}
 	},
-	"projectVersion": 1
+	"projectVersion": 1,
+	"WP8PublisherID": "{ba0ecc64-65c1-45be-a74d-3b7c2e4dc6ed}",
+	"WP8ProductID": "{e8572d9d-8c02-4959-8bda-1a9c9f298e3f}",
+	"WP8PackageIdentityName": "1234Telerik.com.telerik.samplefileopenpdf",
+	"WP8WindowsPublisherName": "CN=Telerik"
 }
