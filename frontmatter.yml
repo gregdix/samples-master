@@ -1,0 +1,7 @@
+title: Open PDF
+slug: sample-file-open-pdf
+page_title: Open PDF | Apache Cordova Sample | Telerik Platform
+description: This sample shows you how to open a locally stored PDF inside your app using the InAppBrowser Apache Cordova plugin. 
+tags: Apache Cordova, iOS, Android, Windows Phone, InAppBrowser, Device, File Transfer, File
+publish: true
+content_filter: true
