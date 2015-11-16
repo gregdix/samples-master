@@ -4,7 +4,6 @@ Open Locally Stored PDF
 
 <a id="top"></a>
 * [Overview](#overview)
-* [Showcased APIs](#showcased-apis)
 * [Screenshots](#screenshots)
 * [Test the Sample](#test-the-sample)
 * [Limitations](#limitations)
@@ -14,26 +13,6 @@ This sample app shows you how to use the InAppBrowser, File Transfer and Device 
 > *Supported mobile platforms:* iOS, Android, Windows Phone
 >
 > *Developed with:* Apache Cordova 3.7.0
-
-[Back to Top](#top)
-
-# Showcased APIs
-
-This sample shows how to use the following method of the [InAppBrowser API][InAppBrowser API].
-
-* **window.open()**: Opens a new browser window.
-
-This sample shows how to use the following method of the [Device API][Device API].
-
-* **platform()**: Retrieves the mobile platform of the device.
-
-This sample shows how to use the following method of the [File Transfer API][File Transfer API].
-
-* **download()**: Downloads the object from the specified source location to the specified target location.
-
-This sample shows how to use the following JavaScript method.
-
-* **replace()**: Searches a string for a specified value or a regular expression and returns a new string where the specified values are replaced.
 
 [Back to Top](#top)
 
@@ -160,6 +139,3 @@ With the AppBuilder command-line interface, you can quickly test your apps on de
 [QR code]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/deploy-remote
 [USB deploy]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-on-devices/running-on-connected-devices/deploy-connected
 [emulators]: http://docs.telerik.com/platform/appbuilder/testing-your-app/running-in-emulators/native-emulators
-[InAppBrowser API]: http://plugins.cordova.io/#/package/org.apache.cordova.inappbrowser
-[File Transfer API]: http://plugins.cordova.io/#/package/org.apache.cordova.file-transfer
-[Device API]: https://www.npmjs.com/package/cordova-plugin-device
