@@ -5,3 +5,4 @@ description: This sample shows you how to open a locally stored PDF inside your 
 tags: Apache Cordova, iOS, Android, Windows Phone, InAppBrowser, Device, File Transfer, File
 publish: true
 content_filter: true
+apis: cordova.inappbrowser cordova.inappbrowser.open cordova.device cordova.device.platform cordova.fileTransfer cordova.fileTransfer.download
