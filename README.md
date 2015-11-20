@@ -8,6 +8,8 @@ Open Locally Stored PDF
 * [Test the Sample](#test-the-sample)
 * [Limitations](#limitations)
 
+# Overview
+
 This sample app shows you how to use the InAppBrowser, File Transfer and Device core Apache Cordova plugins to open a `PDF` file included in your application package. 
 
 > *Supported mobile platforms:* iOS, Android, Windows Phone
