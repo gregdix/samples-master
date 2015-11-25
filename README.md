@@ -14,7 +14,7 @@ This sample app shows you how to use the InAppBrowser, File Transfer and Device 
 
 > *Supported mobile platforms:* iOS, Android, Windows Phone
 >
-> *Developed with:* Apache Cordova 3.7.0
+> *Developed with:* Windows Phone SDK 8.1, Apache Cordova 3.7.0
 
 [Back to Top](#top)
 
