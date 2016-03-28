@@ -62,7 +62,7 @@ function loadPdf(targetUrl) {
 	var infoDiv = document.getElementById("infoField"),
 		windowTarget = device.platform.toLowerCase() === "ios" ? "_blank" : "_system";
 		
-	infoDiv.textContent = targetUrl;
+	infoDiv.textContent = "Path: " + targetUrl;
 	console.log("Loading PDF file from: " + targetUrl);
 
 	window.open(targetUrl, windowTarget, "location=yes,hidden=no");
