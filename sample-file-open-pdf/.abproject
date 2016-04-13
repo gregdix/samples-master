@@ -28,20 +28,21 @@
 		"Landscape"
 	],
 	"iOSStatusBarStyle": "Default",
-	"AndroidHardwareAcceleration": "false",
+	"AndroidHardwareAcceleration": "true",
 	"BundleVersion": "1.0",
 	"AndroidVersionCode": "1",
 	"iOSDeviceFamily": [
 		"1",
 		"2"
 	],
-	"FrameworkVersion": "3.7.0",
+	"FrameworkVersion": "4.0.0",
 	"CorePlugins": [
-		"org.apache.cordova.device",
-		"org.apache.cordova.file",
-		"org.apache.cordova.file-transfer",
-		"org.apache.cordova.inappbrowser",
-		"org.apache.cordova.splashscreen"
+		"cordova-plugin-device",
+		"cordova-plugin-file",
+		"cordova-plugin-file-transfer",
+		"cordova-plugin-inappbrowser",
+		"cordova-plugin-splashscreen",
+		"cordova-plugin-whitelist"
 	],
 	"DisplayName": "File-open-pdf",
 	"WP8SupportedResolutions": [
