@@ -41,11 +41,6 @@
   "WP8Requirements": [],
   "Description": "sample-file-open-pdf",
   "Framework": "Cordova",
-  "CordovaPluginVariables": {
-    "com.telerik.mobiletesting": {
-      "IOS_APP_URL": ""
-    }
-  },
   "projectVersion": 1,
   "WP8PublisherID": "{ba0ecc64-65c1-45be-a74d-3b7c2e4dc6ed}",
   "WP8ProductID": "{e8572d9d-8c02-4959-8bda-1a9c9f298e3f}",
