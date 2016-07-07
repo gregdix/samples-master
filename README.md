@@ -22,7 +22,7 @@ This sample app shows you how to use the InAppBrowser, File Transfer and Device 
 
 Platform | Home
 ---|---
-All | ![](screenshots/home.png)
+All | ![](https://raw.githubusercontent.com/Icenium/Sample-File-Open-PDF/master/screenshots/home.png)
 
 [Back to Top](#top)
 
