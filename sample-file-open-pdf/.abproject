@@ -1,50 +1,82 @@
 {
   "ProjectGuid": "a06f7aa3-579d-4807-81a7-12620146b061",
   "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
-  "AppIdentifier": "com.telerik.samplefileopenpdf",
+  "AppIdentifier": "com.telerik.gbdtemplate",
   "ProjectName": "sample-file-open-pdf",
   "AndroidPermissions": [
-    "android.permission.INTERNET"
+    "android.permission.ACCESS_FINE_LOCATION",
+    "android.permission.ACCESS_LOCATION_EXTRA_COMMANDS",
+    "android.permission.ACCESS_NETWORK_STATE",
+    "android.permission.ACCESS_WIFI_STATE",
+    "android.permission.CAMERA",
+    "android.permission.CAPTURE_SECURE_VIDEO_OUTPUT",
+    "android.permission.CAPTURE_VIDEO_OUTPUT",
+    "android.permission.CHANGE_NETWORK_STATE",
+    "android.permission.CHANGE_WIFI_STATE",
+    "android.permission.CONTROL_LOCATION_UPDATES",
+    "android.permission.INTERNET",
+    "android.permission.READ_CONTACTS",
+    "android.permission.READ_EXTERNAL_STORAGE",
+    "android.permission.READ_SMS",
+    "android.permission.RECEIVE_SMS",
+    "android.permission.SEND_SMS",
+    "android.permission.VIBRATE",
+    "android.permission.WRITE_SMS"
   ],
   "DeviceOrientations": [
-    "Portrait",
-    "Landscape"
+    "Portrait"
   ],
   "iOSStatusBarStyle": "Default",
   "AndroidHardwareAcceleration": "true",
   "BundleVersion": "1.0",
   "AndroidVersionCode": "1",
   "iOSDeviceFamily": [
-    "1",
-    "2"
+    "1"
   ],
   "FrameworkVersion": "6.4.0",
   "CorePlugins": [
+    "com.bit6.sdk@0.11.0",
+    "com.phonegap.plugins.PushPlugin@3.3.0",
+    "cordova-plugin-camera",
+    "cordova-plugin-contacts",
+    "cordova-plugin-crosswalk-webview@2.2.0",
     "cordova-plugin-device",
+    "cordova-plugin-device-motion",
+    "cordova-plugin-device-orientation",
+    "cordova-plugin-dialogs",
     "cordova-plugin-file",
     "cordova-plugin-file-transfer",
+    "cordova-plugin-geolocation",
     "cordova-plugin-inappbrowser",
+    "cordova-plugin-media",
+    "cordova-plugin-media-capture",
+    "cordova-plugin-network-information",
     "cordova-plugin-splashscreen",
+    "cordova-plugin-statusbar",
+    "cordova-plugin-vibration",
     "cordova-plugin-whitelist"
   ],
-  "DisplayName": "File-open-pdf",
+  "DisplayName": "Eziconnect",
   "WP8SupportedResolutions": [
-    "ID_RESOLUTION_HD720P",
     "ID_RESOLUTION_WVGA",
-    "ID_RESOLUTION_WXGA"
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
   ],
-  "Author": "",
+  "Author": "Gregdix",
   "WP8Publisher": "",
   "WP8TileTitle": "",
   "WP8Capabilities": [],
-  "iOSBackgroundMode": [],
+  "iOSBackgroundMode": [
+    "location"
+  ],
   "WP8Requirements": [],
-  "Description": "sample-file-open-pdf",
+  "Description": "Base app template",
   "Framework": "Cordova",
   "projectVersion": 1,
   "WP8PublisherID": "{ba0ecc64-65c1-45be-a74d-3b7c2e4dc6ed}",
   "WP8ProductID": "{e8572d9d-8c02-4959-8bda-1a9c9f298e3f}",
   "WP8PackageIdentityName": "1234Telerik.com.telerik.samplefileopenpdf",
   "WP8WindowsPublisherName": "CN=Telerik",
-  "WPSdk": "8.1"
+  "WPSdk": "8.1",
+  "iOSDeploymentTarget": "6.0"
 }

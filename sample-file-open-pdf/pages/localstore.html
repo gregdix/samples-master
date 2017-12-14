@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/theme.css" />
+    <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="../scripts/local_main.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Local Storage</h1>
+    </div>
+    <div class="subheader">
+        <div class="row">
+            <div class="col">
+                <input class="input" id="variableNameInput" type="text" placeholder="Enter the variable name" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <input class="input" id="valueInput" placeholder="Enter the variable value" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button dh" id="insertVariable">Insert Record</button>
+            </div>
+            <div class="col">
+                <button class="button dh" id="clearLocalStorage">Clear Storage</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="col u-text-left">
+                <span id="message" class="u-color-accent"></span>
+            </div>
+        </div>
+    </div>
+    <div class="subfooter">
+        <div class="row">
+            <div class="col">
+                <input class="input" id="getRemoveVariableNameInput" type="text" placeholder="Enter name to search for" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <button class="button dh" id="searchVariable">Search</button>
+            </div>
+            <div class="col">
+                <button class="button dh" id="removeVariable">Remove</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Feature Examples</span>
+    </div>
+</body>
+</html>

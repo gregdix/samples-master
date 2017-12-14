@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <meta name="description" content="Bit6 Web Demo">
+    <meta name="author" content="Bit6">
+
+    <script>
+      window.onerror = function(err, file, linenr) {
+        alert("Script error caught: " + err + ", " + file + ", " + linenr);
+      }
+    </script>
+
+    <title>Ezi-Chat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles -->
+    <link href="css/demo.css" rel="stylesheet">
+  </head>
+
+  <body style="background-image: url(img/bolt_app_wallpaper_3a_by_ziggy19.jpg);  background-size: cover;  background-position: top;  background-repeat: no-repeat;">
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation" style="background-color: rgb(255, 255, 255);">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ezi-Chat</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a target="_blank" href="http://datasat.co.za/chat/help.html">About Chat</a></li>
+            <li><a target="_blank" href="../index.html">Main Menu</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right hidden" id="loggedInNavbar">
+            <li><a href="#" id="phoneCallButton"><span class="glyphicon glyphicon-phone-alt"></span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span id="loggedInUser"></span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#" id="logout">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container fh">
+        <!-- Splash page -->
+        <div id="splash">
+          <div class="intro">
+            <h1>Loading...</h1>
+          </div>
+        </div><!-- /#Splash -->
+
+        <!-- Welcome page -->
+        <div id="welcome" class="hidden fh">
+          <div class="intro">
+            <h1>Welcome!</h1>
+            <p class="lead">Try Bit6 awesomeness right in your browser.</p>
+          </div>
+
+          <div class="row">
+            <div class="col-sm-offset-3 col-md-offset-4 col-sm-6 col-md-4">
+
+              <div class="bg-danger" id="authError"></div>
+
+              <form role="form">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="authUsername" placeholder="Username">
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" id="authPassword" placeholder="Password">
+                </div>
+                <button class="btn btn-primary" id="loginButton">Login</button>
+                <button class="btn btn-info" id="signupButton">Sign Up</button>
+              </form>
+
+            </div>
+          </div><!-- /.row -->
+
+      </div><!-- /#welcome -->
+
+      <!-- Main Page -->
+      <div id="main" class="hidden fh">
+
+          <!-- Incoming Call alert -->
+          <div class="alert alert-warning fade in" id="incomingCall">
+            <h4 id="incomingCallFrom">John is calling...</h4>
+            <p id="incomingCallInfo">Do you dare to answer this call?</p>
+            <p>
+              <button type="button" class="btn btn-success" id="answerVideo">Video</button>
+              <button type="button" class="btn btn-success" id="answerAudio">Audio</button>
+              <button type="button" class="btn btn-danger" id="reject">Reject</button>
+            </p>
+          </div>
+
+
+          <div class="row fh">
+
+            <!-- col1 -->
+            <div class="col-sm-4 fh" id="listPane">
+
+              <div class="row top-row">
+
+                <div class="col-xs-6">
+                  <h3>Chats</h3>
+                </div>
+
+                <div class="col-xs-6">
+                  <!-- New Chat dropdown -->
+                  <ul class="nav nav-pills pull-right">
+                    <li class="dropdown" id="newChatDropdown">
+                      <a id="drop1" role="button" data-toggle="dropdown" href="#">New
+                          <b class="caret"></b></a>
+                      <div class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="drop1">
+                        <h4>Direct Chat</h4>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="newChatUsername" placeholder="Username" autocomplete="off">
+                          <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="newChatStart">
+                              <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                            </button>
+                          </span>
+                        </div><!-- /input-group -->
+
+                        <h4>New Group</h4>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="newGroupTitle" placeholder="Group title" autocomplete="off">
+                          <span class="input-group-btn">
+                            <button class="btn btn-primary" type="button" id="newGroupCreate">
+                              <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            </button>
+                          </span>
+                        </div><!-- /input-group -->
+
+                      </div>
+                    </li>
+                    </li>
+                  </ul> <!-- /pills -->
+                </div>
+
+              </div>
+
+              <div class="row" id="chatListRow">
+                <div class="chats" id="chatList"></div>
+              </div>
+
+            </div><!-- /col1 -->
+
+
+            <!-- col2 -->
+            <div class="col-sm-8 fh" id="detailPane">
+
+              <div class="row top-row">
+                <div class="col-sm-5 col-xs-5">
+                  <button class="btn btn-default pull-left visible-xs" id="backToList">
+                    <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                  </button>
+                  <h3 id="chatTitle"></h3>
+                </div>
+                <div class="col-sm-7 col-xs-7">
+                  <div id="chatButtons" class="pull-right">
+
+                    <!-- Audio Call -->
+                    <button class="btn btn-info" id="audioCallButton">
+                      <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                      <span class="hidden-sm hidden-xs">Audio</span>
+                    </button>
+                     <!-- Video Call Options -->
+                     <div class="btn-group" >
+
+                      <button type="button" class="btn btn-info" id="videoCallDefault" >
+                        <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                        <span class="hidden-sm hidden-xs">Video</span>
+                      </button>
+
+                      <button class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only"></span>
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-right">
+                        <li><a href="#" id="videoCallFrontCam">Front Camera</a></li>
+                        <li><a href="#" id="videoCallBackCam">Back Camera</a></li>
+                      </ul>
+                    </div>
+                    <!-- Conversation options -->
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                      <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                    </button>
+
+                    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                      <li><a href="#" id="mediaModeButton">Media mode: P2P</a></li>
+                      <li><a href="#" id="screenCallButton">Share screen</a></li>
+                      <li><a href="#" id="groupInfoButton">Group details</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#" id="deleteChatButton">Delete messages</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" id="msgListRow">
+                <div id="msgList"></div>
+              </div>
+
+              <!-- Compose message area -->
+              <div class="row" id="msgComposeRow">
+                <div class="col-sm-4">
+                  <div class="bg-info" id="msgOtherTyping"></div>
+                </div>
+                <div class="col-sm-8">
+                  <div class="input-group">
+                    <span class="input-group-btn">
+                      <span class="btn btn-default btn-file">
+                        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+                        <input type="file" id="attachFile" />
+                      </span>
+                    </span>
+                    <input type="text" class="form-control" id="msgText" placeholder="Type message">
+                    <span class="input-group-btn">
+                      <button class="btn btn-primary" type="button" id="sendMsgButton">
+                        <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                      </button>
+                    </span>
+                  </div><!-- /input-group -->
+                </div>
+              </div><!-- /.row -->
+
+            </div><!-- /col2 -->
+
+
+            <!-- col3 -->
+            <div class="col-sm-8 fh hidden" id="inCallPane">
+              <div class="row top-row">
+                <div class="col-sm-7 col-xs-7">
+                  <h3 id="inCallOther">Video Call</h3>
+                </div>
+                <div class="col-sm-5 col-xs-5">
+                  <div class="pull-right">
+                    <button class="btn btn-default" id="incallRecord" data-toggle="button" autocomplete="off">
+                      <span class="glyphicon glyphicon-record" aria-hidden="true"></span>
+                      <span class="visible-lg-inline">Record</span>
+                    </button>
+                    <button class="btn btn-default" id="incallVideo" data-toggle="button" autocomplete="off">
+                      <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-default hidden-xs" id="incallScreen" data-toggle="button" autocomplete="off">
+                      <span class="glyphicon glyphicon-share" aria-hidden="true"></span>
+                    </button>
+                    <button class="btn btn-danger" id="hangup">
+                      <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+                      <span class="hidden-xs hidden-sm">Hangup</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row" id="videoContainer"></div>
+
+            </div><!-- /col3 -->
+
+
+          </div><!-- /.row -->
+
+
+      </div><!-- /#main -->
+
+    </div><!-- /.container -->
+
+    <div class="modal fade" id="groupInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="groupInfoTitle">Group info</h4>
+          </div>
+
+          <div class="modal-body">
+
+            <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+              <ul class="nav nav-tabs" role="tablist" style="margin-bottom: 15px">
+                <li role="presentation" class="active">
+                  <a href="#ggen" role="tab" id="ggen-tab" data-toggle="tab" aria-controls="ggen" aria-expanded="true">General</a>
+                </li>
+                <li role="presentation">
+                  <a href="#gmem" role="tab" id="gmem-tab" data-toggle="tab" aria-controls="gmem" aria-expanded="false">Members</a>
+                </li>
+                <li role="presentation">
+                  <a href="#gper" role="tab" id="gper-tab" data-toggle="tab" aria-controls="gper" aria-expanded="false">Permissions</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="ggen" aria-labelledby="ggen-tab">
+                  <h4>General</h4>
+                  <div>ID: <span id="groupInfoId"></span></div>
+                  <div>Me: <span id="groupInfoMe"></span></div>
+                  <h4>Meta</h4>
+                  <pre id="groupInfoMetaRaw"></pre>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="gmem" aria-labelledby="gmem-tab">
+                  <h4>Members
+                    <a class="btn btn-link" data-toggle="collapse" href="#groupInfoMembersRaw">Show JSON</a>
+                  </h4>
+
+                  <pre id="groupInfoMembersRaw" class="collapse"></pre>
+
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>User</th>
+                        <th>Role</th>
+                        <th>Presence</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody id="groupInfoMembers">
+                      <!-- <tr><td>usr:alex</td><td>user</td><td><a href="#">kick</a></td></tr> -->
+                    </tbody>
+                  </table>
+
+                  <div class="form-inline">
+                    <input type="text" class="form-control" id="newMemberUsername" placeholder="New member" autocomplete="off">
+                    <button class="btn btn-primary" type="button" id="newMemberButton">Invite</button>
+                  </div>
+
+                </div>
+                <div role="tabpanel" class="tab-pane" id="gper" aria-labelledby="gper-tab">
+                  <h4>Permissions</h4>
+                  <pre id="groupInfoPermsRaw"></pre>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Include Cordova js file for Cordova app -->
+    <script src="../cordova.js"></script>
+    <!-- app js code -->
+    <script src="../js/adapter.js"></script>
+    <script src="../js/demo.js"></script>
+    <script src="../js/index.js"></script>
+  </body>
+</html>

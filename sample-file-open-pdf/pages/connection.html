@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="../styles/theme.css" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<meta charset="utf-8">
+
+		<script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../scripts/conn_main.js"></script>
+	</head>
+	<body>
+		<div class="header">
+			<h1>Connection</h1>
+		</div>
+		<div class="subheader">
+			<div class="row">
+				<div class="col">
+					<button class="button" id="buttonCheckConnection">Check connection</button>
+				</div>
+			</div>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="col u-text-right u-color-black u-text-bold">Connection type:</div>
+				<div id="messageConnectionType" class="col u-text-left u-color-accent"></div>
+			</div>
+			<div class="row">
+				<div class="col u-text-right u-text-bold">Last check at:</div>
+				<div id="currentTime" class="col u-text-left u-color-accent"></div>
+			</div>
+		</div>
+		<div class="footer">
+			<span>Feature Examples</span>
+		</div>
+	</body>
+</html>

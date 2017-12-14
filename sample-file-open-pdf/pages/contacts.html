@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta charset="utf-8">
+        <link href="../styles/theme.css" rel="stylesheet" type="text/css" />
+
+        <script type="text/javascript" charset="utf-8" src="../cordova.js"></script>
+        <script type="text/javascript" charset="utf-8" src="../scripts/contacts_main.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Contacts Sample</h1>
+        </div>
+        <div class="subheader">
+            <div class="row">
+                <div class="col">
+                    <button class="button big" id="createContactButton">Create New Contact</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                     <input type="text" id="srch" value="" placeholder="Search..." />
+                    <button class="button big" id="findContactButton">Find Contact</button>
+                </div>
+                <div class="col">
+                    <button class="button big" id="cloneContactButton">Clone Contact</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button class="button big" id="removeContactButton">Remove Contact</button>
+                </div>
+            </div>
+        </div>    
+        <div class="content">
+            <div class="row" id="results">
+                <div class="col u-text-center u-color-accent">
+                    <span id="result"></span>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span>Feature Examples</span>
+        </div>
+    </body>
+</html>
