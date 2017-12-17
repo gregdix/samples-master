@@ -36,3 +36,4 @@ ConnectionApp.prototype = {
 		currentTimeDiv.textContent = now;
 	}
 }
+

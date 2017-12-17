@@ -1,0 +1,27 @@
+{
+  "name": "js-nfc-wifi-parser",
+  "homepage": "https://github.com/gfnork/js-nfc-wifi-parser",
+  "authors": [
+    "Qiong Wu <qiong.wu@gfnork.de>"
+  ],
+  "description": "",
+  "main": "dist/nfc-wifi-parser.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "4067826f27",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "4067826f27f816449217e8f641090db3e51f18e5"
+  },
+  "_source": "https://github.com/gfnork/js-nfc-wifi-parser.git",
+  "_target": "*",
+  "_originalSource": "js-nfc-wifi-parser",
+  "_direct": true
+}
